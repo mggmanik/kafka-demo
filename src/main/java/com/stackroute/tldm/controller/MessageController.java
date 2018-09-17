@@ -12,7 +12,7 @@ public class MessageController {
 
     private MessageService messageService;
     private KafkaTemplate<String, Message> kafkaTemplate;
-    private static String BOOT_TOPIC = "chatting-demo";
+    private static String BOOT_TOPIC = "messages";
 
     @Autowired
     public MessageController(MessageService messageService, KafkaTemplate<String, Message> kafkaTemplate) {

@@ -5,4 +5,4 @@ spring:
       group-id: boot
 
 topic:
-  boot: chatting-demo
+  boot: messages

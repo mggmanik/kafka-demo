@@ -5,6 +5,8 @@ import com.stackroute.tldm.repository.MessageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
+
 @Service
 public class MessageServiceImpl implements MessageService {
 
@@ -17,6 +19,7 @@ public class MessageServiceImpl implements MessageService {
 
     @Override
     public void createMessage(Message message) {
+        message.setCreatedAt(new Date());
         messageRepository.insert(message);
     }
 }

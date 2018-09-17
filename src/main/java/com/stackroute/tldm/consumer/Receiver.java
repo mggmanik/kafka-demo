@@ -18,12 +18,6 @@ public class Receiver {
         this.template = template;
     }
 
-//    @KafkaListener(topics = "${topic.boot}")
-//    public void receive(ConsumerRecord<String, Message> consumerRecord) throws Exception {
-//        Message message = consumerRecord.value();
-//        template.convertAndSend("/topic/response", new Message(message.getMessageId(), message.getMessageContent(), message.getSender(), message.getReceiver(), message.getCreatedAt()));
-//    }
-
     @KafkaListener(topics = "${topic.boot}")
     public void receive(@Payload Message message) {
         System.out.println();
